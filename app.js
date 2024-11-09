@@ -123,7 +123,13 @@ const user= require('./src/models/users');
 require('./src/strategies/local')
 const { error } = require('console');
 //middleware
-mongoose.connect('mongodb://127.0.0.1/test')
+const uri = "mongodb+srv://filexmbogo:filexmbogo.691@cluster0.rff4u.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+// Create Mongoose connection
+mongoose.connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 app.use(express.static(path.join(__dirname,'src/public')));
 app.use(express.urlencoded({extended:true}))
 app.use(passport.initialize())
