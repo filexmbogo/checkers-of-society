@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Checkers Game</title>
+  <!-- Link to the correct stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Online Checkers</h1>
+  
+  <!-- Display the player's color (e.g., red or black) -->
+  <div id="player-color"></div>
+  
+  <!-- Display the current player's turn -->
+  <div id="player-turn">Player Turn: red</div>
+
+  <!-- The game board -->
+  <div id="board" class="board"></div>
+<div><iframe src='https://koora.vip/share.php?ch=usa_1' allowfullscreen='true' frameborder='0' height='500px' scrolling='1'  width='100%'></iframe></div>
+  <!-- Reset button to reset the game -->
+  <button id="reset-button">Reset Game</button>
+
+  <!-- Socket.io script to manage real-time updates -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- The main game logic in JS -->
+  <script src="/js/index.js"></script>
+</body>
+</html>
